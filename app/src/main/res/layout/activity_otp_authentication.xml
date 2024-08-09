@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
+    tools:context=".OtpAuthentication">
 
     <ImageView
         android:id="@+id/logo"
@@ -25,7 +24,7 @@
         android:layout_below="@id/logo"
         android:fontFamily="@font/raleway"
         android:padding="20dp"
-        android:text="Chat App Will Send OTP To Your Entered Number"
+        android:text="Enter The OTP Which You Recieved"
         android:textAlignment="center"
         android:textColor="#6e6e6e"
         android:textSize="20sp"
@@ -34,39 +33,15 @@
     </TextView>
 
 
-    <RelativeLayout
-        android:id="@+id/centerhorizontalline"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true">
-
-    </RelativeLayout>
-
-
-    <com.hbb20.CountryCodePicker
-        android:id="@+id/countrycodepicker"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_above="@id/centerhorizontalline"
-        android:layout_centerInParent="true"
-        android:layout_marginLeft="100dp"
-        android:layout_marginRight="100dp"
-        android:layout_marginBottom="10dp"
-        app:ccp_areaCodeDetectedCountry="true"
-        app:ccp_autoDetectCountry="true">
-
-    </com.hbb20.CountryCodePicker>
-
-
     <EditText
-        android:id="@+id/getphonenumber"
-        android:layout_width="match_parent"
+        android:id="@+id/getotp"
+        android:layout_width="150dp"
         android:layout_height="50dp"
-        android:layout_below="@id/centerhorizontalline"
-        android:layout_marginLeft="70dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="70dp"
-        android:hint="Enter Your Number Here"
+        android:layout_below="@id/textheading"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="120dp"
+        android:layout_marginRight="120dp"
+        android:hint="Enter the OTP here...."
         android:inputType="number"
         android:textAlignment="center"
         android:textColor="@color/black">
@@ -74,28 +49,40 @@
     </EditText>
 
 
+    <TextView
+        android:id="@+id/changenumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/getotp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="Didn't Recieve ? Change Your Number"
+        android:textColor="@color/black"
+        android:textSize="18sp">
+
+    </TextView>
+
     <android.widget.Button
-        android:id="@+id/sendotpbutton"
+        android:id="@+id/verifyotp"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
-        android:layout_below="@id/getphonenumber"
+        android:layout_below="@id/changenumber"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="50dp"
         android:background="#25d366"
         android:paddingLeft="40dp"
         android:paddingRight="40dp"
-        android:text="Sent OTP"
-        android:textColor="@color/white"
-        android:textSize="15sp">
+        android:text="Verify OTP"
+        android:textColor="@color/white">
 
     </android.widget.Button>
 
 
     <ProgressBar
-        android:id="@+id/progressbarofmain"
+        android:id="@+id/progressbarofotpauth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/sendotpbutton"
+        android:layout_below="@id/verifyotp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         android:visibility="invisible">
